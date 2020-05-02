@@ -1,4 +1,5 @@
-# Descargar libros gratis de link.springer.com (Disponibles hasta Julio)
+# Descargar libros gratis de link.springer.com (Disponibles hasta Julio) :books:
+/play secret
 1. Springer debido al Covid 19 está dejando descargar gratis ciertos libros.<br>
    **[Clic si quieres ver el sitio de descarga de los libros](https://link.springer.com/search/page/1?facet-content-type=%22Book%22&package=mat-covid19_textbooks "Dale click para sapear el sitio web")**
    ![](./img/1.png "Esta es la página de descarga")
