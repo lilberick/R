@@ -67,6 +67,14 @@ daily_death %>%
     mode = "lines+markers",
     name = "Bolivia"
   ) %>%
+  plotly::add_trace(
+    x = ~date,
+    y = ~Mexico,
+    type = "scatter",
+    mode = "lines+markers",
+    name = "Mexico"
+  ) %>%
+
   plotly::layout(
     title = "",
     legend = list(x = 0.1, y = 0.9),
