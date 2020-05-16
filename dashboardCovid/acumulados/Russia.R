@@ -12,7 +12,7 @@ recovered_color <- "forestgreen"
 death_color <- "red"
 #------data-----------
 df_daily <- coronavirus %>%
-  dplyr::filter(Country.Region == "Russia") %>%
+  dplyr::filter(country == "Russia") %>%
   dplyr::group_by(date, type) %>%
   dplyr::summarise(total = sum(cases, na.rm = TRUE)) %>%
   tidyr::pivot_wider(
@@ -69,36 +69,10 @@ plotly::plot_ly(data = df_daily) %>%
     line = list(color = recovered_color),
     marker = list(color = recovered_color)
   ) %>%
-  plotly::add_annotations(
-    x = as.Date("2020-03-06"),
-    y = 1,
-    text = paste("First case"),
-    xref = "x",
-    yref = "y",
-    arrowhead = 5,
-    arrowhead = 3,
-    arrowsize = 1,
-    showarrow = TRUE,
-    ax = -10,
-    ay = -90
-  ) %>%
-  plotly::add_annotations(
-    x = as.Date("2020-03-20"),
-    y = 3,
-    text = paste("First death"),
-    xref = "x",
-    yref = "y",
-    arrowhead = 5,
-    arrowhead = 3,
-    arrowsize = 1,
-    showarrow = TRUE,
-    ax = -10,
-    ay = -90
-  ) %>%
   plotly::layout(
     title = "",
-    yaxis = list(title = "Cumulative number of cases"),
-    xaxis = list(title = "Date"),
+    yaxis = list(title = "Número acumulado de nuevos casos en Russia"),
+    xaxis = list(title = "Fecha"),
     legend = list(x = 0.1, y = 0.9),
     hovermode = "compare"
   )

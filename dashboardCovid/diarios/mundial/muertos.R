@@ -7,7 +7,7 @@ data(coronavirus)
 daily_death <- coronavirus %>%
   dplyr::filter(type == "death") %>%
   dplyr::filter(date >= "2020-02-29") %>%
-  dplyr::mutate(country = Country.Region) %>%
+  dplyr::mutate(country = country) %>%
   dplyr::group_by(date, country) %>%
   dplyr::summarise(total = sum(cases)) %>%
   dplyr::ungroup() %>%

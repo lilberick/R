@@ -7,7 +7,7 @@ data(coronavirus)
 daily_confirmed <- coronavirus %>%
   dplyr::filter(type == "confirmed") %>%
   dplyr::filter(date >= "2020-02-29") %>%
-  dplyr::mutate(country = Country.Region) %>%
+  dplyr::mutate(country = country) %>%
   dplyr::group_by(date, country) %>%
   dplyr::summarise(total = sum(cases)) %>%
   dplyr::ungroup() %>%
@@ -27,38 +27,51 @@ daily_confirmed %>%
   ) %>%
   plotly::add_trace(
     x = ~date,
-    y = ~France,
+    y = ~Colombia,
     type = "scatter",
     mode = "lines+markers",
-    name = "France"
+    name = "Colombia"
   ) %>%
   plotly::add_trace(
     x = ~date,
-    y = ~Spain,
+    y = ~Ecuador,
     type = "scatter",
     mode = "lines+markers",
-    name = "Spain"
+    name = "Ecuador"
   ) %>%
   plotly::add_trace(
     x = ~date,
-    y = ~Italy,
+    y = ~Brazil,
     type = "scatter",
     mode = "lines+markers",
-    name = "Italy"
+    name = "Brazil"
   ) %>%
   plotly::add_trace(
     x = ~date,
-    y = ~China,
+    y = ~Argentina,
     type = "scatter",
     mode = "lines+markers",
-    name = "China"
+    name = "Argentina"
   ) %>%
-
+  plotly::add_trace(
+    x = ~date,
+    y = ~Chile,
+    type = "scatter",
+    mode = "lines+markers",
+    name = "Chile"
+  ) %>%
+  plotly::add_trace(
+    x = ~date,
+    y = ~Bolivia,
+    type = "scatter",
+    mode = "lines+markers",
+    name = "Bolivia"
+  ) %>%
   plotly::layout(
     title = "",
     legend = list(x = 0.1, y = 0.9),
-    yaxis = list(title = "Number of new cases"),
-    xaxis = list(title = "Date"),
+    yaxis = list(title = "Numero de nuevos casos de infectados"),
+    xaxis = list(title = "Fecha"),
     paper_bgcolor = "black",
     plot_bgcolor = "black",
     font = list(color = 'white'),

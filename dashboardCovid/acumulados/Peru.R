@@ -12,7 +12,7 @@ recovered_color <- "forestgreen"
 death_color <- "red"
 #------data-----------
 df_daily <- coronavirus %>%
-  dplyr::filter(Country.Region == "Peru") %>%
+  dplyr::filter(country == "Peru") %>%
   dplyr::group_by(date, type) %>%
   dplyr::summarise(total = sum(cases, na.rm = TRUE)) %>%
   tidyr::pivot_wider(
@@ -97,8 +97,10 @@ plotly::plot_ly(data = df_daily) %>%
   ) %>%
   plotly::layout(
     title = "",
-    yaxis = list(title = "Cumulative number of cases"),
-    xaxis = list(title = "Date"),
+    yaxis = list(title = "Número acumulado de nuevos casos en Perú"),
+    xaxis = list(title = "Fecha"),
+    paper_bgcolor = "black",
+    plot_bgcolor = "black",
     legend = list(x = 0.1, y = 0.9),
     hovermode = "compare"
   )
