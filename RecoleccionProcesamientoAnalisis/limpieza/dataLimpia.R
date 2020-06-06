@@ -1,6 +1,6 @@
 a<-read.csv("data.csv")
 #procesado de peso
-a$Peso<-as.character(a%Peso)
+a$Peso<-as.character(a$Peso)
 a$Peso<-gsub(" Kg","",a$Peso)
 a$Peso<-gsub(",",".",a$Peso)
 a$Peso<-gsub("-1","NA",a$Peso)
