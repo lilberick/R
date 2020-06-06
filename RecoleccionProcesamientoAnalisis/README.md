@@ -14,3 +14,12 @@
 		```
 	2. Nos genera la data limpia en el archivo: **dataLimpia.csv**  
 		![](limpieza/img/1.png)
+3. kmeans: modelos no supervisados  
+	1. Utilizaremos esta data que está limpia en la parte numérica: **dataLimpia.csv**    
+		![](kmeans/img/1.png)
+	2. Normalizamos la data: **dataNormalizada.csv**    
+		![](kmeans/img/2.png)
+	3. Elegimos el número óptimo de clusters usando el método Elbow   
+		![](kmeans/img/3.png)
+	4. Calculamos los clusters  
+		![](kmeans/img/4.png)
