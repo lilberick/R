@@ -13,18 +13,19 @@ dameLinksPagina<-function(url){
 getArticulo<-function(url){
   library(rvest)
   pagina_web<-read_html(url)
+  #nombre_texto
   nombre<-"#productTitle"
   nombre_nodo<-html_node(pagina_web, nombre)
   nombre_texto<-html_text(nombre_nodo)
-  #nombre_texto
+  #opiniones_texto
   opiniones<-"#acrCustomerReviewText"
   opiniones_nodo<-html_node(pagina_web, opiniones)
   opiniones_texto<-html_text(opiniones_nodo)
-  #opiniones_texto
+  #precio_texto
   precio<-"#priceblock_ourprice"
   precio_nodo<-html_node(pagina_web, precio)
   precio_texto<-html_text(precio_nodo)
-  #precio_texto
+  #tabla
   tabla<-"#prodDetails > div.wrapper.ESlocale > div.column.col1 > div > div.content.pdClearfix > div > div > table"
   tabla_nodo<-html_node(pagina_web, tabla)
   if(!is.na(tabla_nodo)){ #SI el nodo no esta vacio!!!
