@@ -70,7 +70,7 @@ daily_confirmed %>%
   plotly::layout(
     title = "",
     legend = list(x = 0.1, y = 0.9),
-    yaxis = list(title = "Numero de nuevos casos de infectados"),
+    yaxis = list(title = "CONFIRMADOS (DIARIO)"),
     xaxis = list(title = "Fecha"),
     paper_bgcolor = "black",
     plot_bgcolor = "black",

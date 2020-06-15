@@ -78,8 +78,8 @@ daily_death %>%
   plotly::layout(
     title = "",
     legend = list(x = 0.1, y = 0.9),
-    yaxis = list(title = "Numero de muertos"),
-    xaxis = list(title = "Fecha"),
+    yaxis = list(title = "MUERTOS  (DIARIO)"),
+    xaxis = list(title = "FECHA"),
     paper_bgcolor = "black",
     plot_bgcolor = "black",
     font = list(color = 'white'),

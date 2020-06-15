@@ -97,10 +97,11 @@ plotly::plot_ly(data = df_daily) %>%
   ) %>%
   plotly::layout(
     title = "",
-    yaxis = list(title = "Número acumulado de nuevos casos en Perú"),
+    yaxis = list(title = "Número de casos en Perú (Acumulado)"),
     xaxis = list(title = "Fecha"),
     paper_bgcolor = "black",
     plot_bgcolor = "black",
+    font = list(color = 'white'),
     legend = list(x = 0.1, y = 0.9),
     hovermode = "compare"
   )

@@ -71,7 +71,7 @@ plotly::plot_ly(data = df_daily) %>%
   ) %>%
   plotly::layout(
     title = "",
-    yaxis = list(title = "Número acumulado de casos en China"),
+    yaxis = list(title = "Número de casos en China (Acumulado)"),
     xaxis = list(title = "Fecha"),
     legend = list(x = 0.1, y = 0.9),
     hovermode = "compare"
