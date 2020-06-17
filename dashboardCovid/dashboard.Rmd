@@ -4,7 +4,7 @@ output:
   flexdashboard::flex_dashboard:
     vertical_layout: scroll
 ---
-### Chart 1
+### Número de casos en Perú (Acumulados)
 ```{r}
 #------------------ Packages ------------------
 library(flexdashboard)
@@ -116,7 +116,7 @@ plotly::plot_ly(data = df_daily) %>%
   )
 ```
    
-### Chart 2
+### Muertos (Diario)
 ```{r}
 #------------------ Packages ------------------
 library(flexdashboard)
@@ -215,7 +215,7 @@ daily_death %>%
   )
 ```
 
-### Chart 3
+### Muertos (Diario)
 ```{r}
 #------------------ Packages ------------------
 library(flexdashboard)
@@ -272,6 +272,27 @@ daily_death %>%
     type = "scatter",
     mode = "lines+markers",
     name = "China"
+  ) %>%
+  plotly::add_trace(
+    x = ~date,
+    y = ~Germany,
+    type = "scatter",
+    mode = "lines+markers",
+    name = "Germany"
+  ) %>%
+  plotly::add_trace(
+    x = ~date,
+    y = ~US,
+    type = "scatter",
+    mode = "lines+markers",
+    name = "US"
+  ) %>%
+  plotly::add_trace(
+    x = ~date,
+    y = ~Japan,
+    type = "scatter",
+    mode = "lines+markers",
+    name = "Japan"
   ) %>%
   plotly::layout(
     title = "",
