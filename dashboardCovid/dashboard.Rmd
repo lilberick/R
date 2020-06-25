@@ -10,7 +10,8 @@ output:
 library(flexdashboard)
 #library(coronavirus)
 #data(coronavirus)
-coronavirus<-read.csv("coronavirus.csv")
+#coronavirus<-read.csv("coronavirus.csv")
+coronavirus<-read.csv("https://raw.githubusercontent.com/RamiKrispin/coronavirus/master/csv/coronavirus.csv",stringsAsFactors=FALSE)
 `%>%` <- magrittr::`%>%`
 #------------------ Parameters ------------------
 # Set colors
@@ -122,7 +123,8 @@ plotly::plot_ly(data = df_daily) %>%
 library(flexdashboard)
 #library(coronavirus)
 #data(coronavirus)
-coronavirus<-read.csv("coronavirus.csv")
+#coronavirus<-read.csv("coronavirus.csv")
+coronavirus<-read.csv("https://raw.githubusercontent.com/RamiKrispin/coronavirus/master/csv/coronavirus.csv",stringsAsFactors=FALSE)
 `%>%` <- magrittr::`%>%`
 #---------data-------
 daily_death <- coronavirus %>%
@@ -221,7 +223,8 @@ daily_death %>%
 library(flexdashboard)
 #library(coronavirus)
 #data(coronavirus)
-coronavirus<-read.csv("coronavirus.csv")
+#coronavirus<-read.csv("coronavirus.csv")
+coronavirus<-read.csv("https://raw.githubusercontent.com/RamiKrispin/coronavirus/master/csv/coronavirus.csv",stringsAsFactors=FALSE)
 `%>%` <- magrittr::`%>%`
 #---------data-------
 daily_death <- coronavirus %>%
