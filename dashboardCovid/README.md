@@ -20,4 +20,4 @@
 	2. Muertos (Diario): Perú, Colombia, Ecuador, Brazil, Argentina, Chile, Bolivia, México  
 		![](.img/2.png)
 	3. Muertos (Diario): Perú, France, Spain, Italy, China  
-		![](.img/2.png)
+		![](.img/3.png)
